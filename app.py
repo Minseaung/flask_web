@@ -17,8 +17,13 @@ def about():
 @app.route('/articles')
 def articles():
     articles = Articles()
-    print(articles[0]['title'])
+    # print(articles[0]['title'])
     return render_template("articles.html", articles = articles)
+
+@app.route('/article/<id>')
+def article(id):
+    print(id)
+    return "Success"
 
 if __name__ == '__main__':
     app.run()
