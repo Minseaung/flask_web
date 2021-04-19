@@ -16,7 +16,7 @@ def about():
 
 @app.route('/articles') #사이트 뒤에 /공간 을 지정해주는 것
 def articles():
-    articles = Articles() #Articles()는 data.py에서 받아옴! 그 함수를 변수로 지정해주는 정보지정.
+    articles = Articles() #Articles()는 data.py에서 받아옴! 그 함수(정보)를 변수로 지정해주는 정보지정.
     # print(articles[0]['title'])
     return render_template("articles.html", articles = articles) #articles.html = 공간. 사이트가 이동했을 때 존재하는 공간, 즉 바구니를 지정해줌. 변수 = articles는 위에서 지정한 정보를 입력해주는 용도. 없으면 안됨!
 
