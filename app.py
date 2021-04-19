@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 app.debug = True
 
-@app.route('/data', methods=['GET'])
+@app.route('/', methods=['GET'])
 def index():
     #return "Hello World"
     return render_template("index.html", data = 'KIM')
