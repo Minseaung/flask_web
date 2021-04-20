@@ -1,0 +1,10 @@
+{% extends "layouts.html" %}
+{% block body %}
+<h1 class="display-4">글 작성</h1>
+    <form action="/add_articles" method="post">
+        <input type="text" name="author" placeholder="작성자">
+        <input type="text" name="title" placeholder="제목">
+        <input type="text" name="desc" placeholder="본문">
+        <input type="submit" value="작성">
+    </form>
+{% endblock %}
